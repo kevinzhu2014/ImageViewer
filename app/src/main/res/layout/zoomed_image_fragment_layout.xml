@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@android:color/black" >
+
+    <ViewSwitcher
+        android:id="@+id/imagezoomdialog_view_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ProgressBar
+            android:id="@+id/progress_pb"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/img_giv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="matrix"
+            android:visibility="visible"/>
+    </ViewSwitcher>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:paddingBottom="10dip" >
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:text="保存"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>
